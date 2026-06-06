@@ -1,0 +1,88 @@
+import { _ as _export_sfc, a as __nuxt_component_0 } from "../server.mjs";
+import { ref, mergeProps, unref, withCtx, createTextVNode, useSSRContext } from "vue";
+import { ssrRenderAttrs, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrRenderComponent } from "vue/server-renderer";
+import { u as useHead } from "./v3-gZWcuvll.js";
+import "C:/Users/yuma/Desktop/asuka-modern/node_modules/ofetch/dist/node.mjs";
+import "#internal/nuxt/paths";
+import "C:/Users/yuma/Desktop/asuka-modern/node_modules/hookable/dist/index.mjs";
+import "C:/Users/yuma/Desktop/asuka-modern/node_modules/unctx/dist/index.mjs";
+import "C:/Users/yuma/Desktop/asuka-modern/node_modules/h3/dist/index.mjs";
+import "vue-router";
+import "C:/Users/yuma/Desktop/asuka-modern/node_modules/defu/dist/defu.mjs";
+import "C:/Users/yuma/Desktop/asuka-modern/node_modules/ufo/dist/index.mjs";
+import "C:/Users/yuma/Desktop/asuka-modern/node_modules/@unhead/vue/dist/index.mjs";
+const _sfc_main = {
+  __name: "shipping",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const activeTab = ref("no-stock-air");
+    const tabs = [
+      { id: "no-stock-air", label: "無在庫航空便", icon: "fa-solid fa-plane" },
+      { id: "air", label: "有在庫航空便", icon: "fa-solid fa-plane-departure" },
+      { id: "sea", label: "快速船便", icon: "fa-solid fa-ship" },
+      { id: "container", label: "混載・コンテナ便", icon: "fa-solid fa-truck-ramp-box" }
+    ];
+    useHead({
+      title: "国際送料 - asuka",
+      meta: [
+        { name: "description", content: "asukaの国際送料表。無在庫向け個別配送、航空便（OCS、流通王、EMS、液体・バッテリー特別便）、快速船便、混載コンテナ船便など各種配送手段の単価・リードタイム一覧。" }
+      ]
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_NuxtLink = __nuxt_component_0;
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "container page-section page-top-padding" }, _attrs))} data-v-106966db><h1 class="section-title" data-v-106966db>国際送料一覧</h1><p class="section-subtitle" data-v-106966db> 無在庫航空便から大口コンテナ船便まで、荷物の種類やボリュームに応じた最適な物流ルートを用意しています。 </p><div class="glass-card calculator-helper animate-fade-in-up" data-v-106966db><div class="calc-header" data-v-106966db><i class="fa-solid fa-calculator" data-v-106966db></i><h3 data-v-106966db>容積重量の計算方法について</h3></div><p class="calc-desc" data-v-106966db> 国際送料は、梱包後の<strong data-v-106966db>「実重量」</strong>と、梱包サイズから算出する<strong data-v-106966db>「容積重量」</strong>のいずれか大きい方を基準に決定されます。 </p><div class="calc-formula" data-v-106966db><div class="formula-box" data-v-106966db><span class="formula-title" data-v-106966db>容積重量の算出式</span><span class="formula-text" data-v-106966db>縦 (cm) × 横 (cm) × 高さ (cm) ÷ 5000 または 6000 ＝ 容積重量 (kg)</span></div></div></div><div class="tabs-container" data-v-106966db><div class="tabs-list" data-v-106966db><!--[-->`);
+      ssrRenderList(tabs, (tab) => {
+        _push(`<button class="${ssrRenderClass([{ active: unref(activeTab) === tab.id }, "tab-btn"])}" data-v-106966db><i class="${ssrRenderClass(tab.icon)}" data-v-106966db></i> ${ssrInterpolate(tab.label)}</button>`);
+      });
+      _push(`<!--]--></div><div class="tab-panels-content" data-v-106966db>`);
+      if (unref(activeTab) === "no-stock-air") {
+        _push(`<div class="tab-panel glass-card animate-fade-in-up" data-v-106966db><h3 data-v-106966db>無在庫航空便</h3><p class="panel-desc" data-v-106966db>顧客へのダイレクト配送（個別直送）に特化した無在庫販売支援用の航空便ルートです。</p><div class="table-responsive" data-v-106966db><table class="premium-table" data-v-106966db><thead data-v-106966db><tr data-v-106966db><th data-v-106966db>重量区分</th><th data-v-106966db>日本向け (直送)</th><th data-v-106966db>韓国向け (直送)</th></tr></thead><tbody data-v-106966db><tr data-v-106966db><td class="bold-td" data-v-106966db>0g ～ 500g</td><td class="text-primary-color font-bold" data-v-106966db>50元</td><td data-v-106966db>100元</td></tr><tr data-v-106966db><td class="bold-td" data-v-106966db>以降 500g 毎に加算</td><td class="font-bold" data-v-106966db>+15元</td><td data-v-106966db>+20元</td></tr></tbody></table></div><div class="panel-notes" data-v-106966db><h4 data-v-106966db><i class="fa-solid fa-circle-info" data-v-106966db></i> 注意事項</h4><ul data-v-106966db><li data-v-106966db>発送手続き完了後の配送先住所の変更は、転送手数料として別途 <strong data-v-106966db>1,200円</strong> が発生します。</li><li data-v-106966db>エンドユーザー様による受け取り拒否、または商品の破棄を希望される場合、別途 <strong data-v-106966db>1,200円</strong> の手数料を申し受けます。</li><li data-v-106966db>韓国便は航空価格の変動が大きいため、ご利用前に担当スタッフまで最新レートをお問い合わせください。</li></ul></div></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      if (unref(activeTab) === "air") {
+        _push(`<div class="tab-panel glass-card animate-fade-in-up" data-v-106966db><h3 data-v-106966db>有在庫向け 航空便ルート</h3><p class="panel-desc" data-v-106966db>21kg以上のまとまった荷物を最速で納品する有在庫・大口向けの主力航空ルートです。</p><div class="table-responsive" data-v-106966db><table class="premium-table" data-v-106966db><thead data-v-106966db><tr data-v-106966db><th data-v-106966db>重量帯</th><th data-v-106966db>OCS (推奨)</th><th data-v-106966db>流通王</th><th data-v-106966db>電池・液体特殊ルート</th><th data-v-106966db>EMS</th></tr></thead><tbody data-v-106966db><tr data-v-106966db><td class="bold-td" data-v-106966db>21kg 未満</td><td data-v-106966db>最初の500g: 95元<br data-v-106966db>以降500g毎: 25元</td><td data-v-106966db>最初の500g: 90元<br data-v-106966db>以降500g毎: 20元</td><td data-v-106966db>最初の500g: 150元<br data-v-106966db>以降500g毎: 30元</td><td rowspan="5" class="vertical-middle" data-v-106966db>最初の500g: 150元<br data-v-106966db>以降500g毎: 30元</td></tr><tr data-v-106966db><td class="bold-td" data-v-106966db>21kg ～ 50kg</td><td class="font-bold text-primary-color" data-v-106966db>27元 / kg</td><td data-v-106966db>30元 / kg</td><td rowspan="4" class="vertical-middle text-muted" data-v-106966db>22kg以上は都度お見積り（お問い合わせください）</td></tr><tr data-v-106966db><td class="bold-td" data-v-106966db>51kg ～ 100kg</td><td class="font-bold text-primary-color" data-v-106966db>27元 / kg</td><td data-v-106966db>29元 / kg</td></tr><tr data-v-106966db><td class="bold-td" data-v-106966db>101kg ～ 300kg</td><td class="font-bold text-primary-color" data-v-106966db>26元 / kg</td><td data-v-106966db>28元 / kg</td></tr><tr data-v-106966db><td class="bold-td" data-v-106966db>300kg 以上</td><td class="font-bold text-primary-color" data-v-106966db>26元 / kg</td><td data-v-106966db>28元 / kg</td></tr><tr class="info-row" data-v-106966db><td class="bold-td" data-v-106966db>FBA直送</td><td class="text-success font-bold" data-v-106966db><i class="fa-solid fa-circle-check" data-v-106966db></i> 対応可</td><td class="text-success font-bold" data-v-106966db><i class="fa-solid fa-circle-check" data-v-106966db></i> 対応可</td><td class="text-danger font-bold" data-v-106966db><i class="fa-solid fa-circle-xmark" data-v-106966db></i> 不可</td><td class="text-danger font-bold" data-v-106966db><i class="fa-solid fa-circle-xmark" data-v-106966db></i> 不可</td></tr><tr class="info-row" data-v-106966db><td class="bold-td" data-v-106966db>着荷目安日数</td><td data-v-106966db>3 ～ 5日</td><td data-v-106966db>5 ～ 7日</td><td data-v-106966db>5 ～ 10日</td><td data-v-106966db>7 ～ 10日</td></tr><tr class="info-row" data-v-106966db><td class="bold-td" data-v-106966db>関税お支払い</td><td data-v-106966db>口座引き落とし / 都度振込</td><td data-v-106966db>口座引き落とし / 都度振込</td><td data-v-106966db>到着時支払い</td><td data-v-106966db>到着時支払い</td></tr></tbody></table></div><div class="panel-notes" data-v-106966db><h4 data-v-106966db><i class="fa-solid fa-circle-info" data-v-106966db></i> 注意事項</h4><ul data-v-106966db><li data-v-106966db>FBA倉庫へ直接納品する場合、納品設定された商品のASIN番号および出品者マイページのキャプチャ画面が事前に必要となります。</li><li data-v-106966db>液体・粉末・磁気を含む危険物検査が別途必要となる場合、検査費用（1品目約400元）が実費発生する場合がございます。</li></ul></div></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      if (unref(activeTab) === "sea") {
+        _push(`<div class="tab-panel glass-card animate-fade-in-up" data-v-106966db><h3 data-v-106966db>快速船便ルート</h3><p class="panel-desc" data-v-106966db>配送スピードと低コストを兼ね備えた、大口貨物向けの快速船便プランです。</p><div class="table-responsive" data-v-106966db><table class="premium-table" data-v-106966db><thead data-v-106966db><tr data-v-106966db><th data-v-106966db>重量帯</th><th data-v-106966db>海源船便 (個人宅宛て)</th><th data-v-106966db>海源船便 (FBA直送)</th><th data-v-106966db>EMS船便</th></tr></thead><tbody data-v-106966db><tr data-v-106966db><td class="bold-td" data-v-106966db>21kg 未満</td><td data-v-106966db>-</td><td data-v-106966db>-</td><td rowspan="8" class="vertical-middle" data-v-106966db>最初の2kgまで: 140元<br data-v-106966db>以降1kg毎に: +20元<br data-v-106966db><span class="note" data-v-106966db>(最大1箱30kgまで)</span></td></tr><tr data-v-106966db><td class="bold-td" data-v-106966db>21kg ～ 50kg</td><td data-v-106966db>-</td><td data-v-106966db>-</td></tr><tr data-v-106966db><td class="bold-td" data-v-106966db>51kg ～ 74kg</td><td data-v-106966db>-</td><td class="font-bold text-primary-color" data-v-106966db>17元 / kg</td></tr><tr data-v-106966db><td class="bold-td" data-v-106966db>75kg ～ 100kg</td><td data-v-106966db>-</td><td class="font-bold text-primary-color" data-v-106966db>17元 / kg</td></tr><tr data-v-106966db><td class="bold-td" data-v-106966db>101kg ～ 200kg</td><td data-v-106966db>-</td><td class="font-bold text-primary-color" data-v-106966db>16元 / kg</td></tr><tr data-v-106966db><td class="bold-td" data-v-106966db>201kg ～ 300kg</td><td class="font-bold" data-v-106966db>13元 / kg</td><td class="font-bold text-primary-color" data-v-106966db>16元 / kg</td></tr><tr data-v-106966db><td class="bold-td" data-v-106966db>301kg ～ 500kg</td><td class="font-bold" data-v-106966db>13元 / kg</td><td class="font-bold text-primary-color" data-v-106966db>15元 / kg</td></tr><tr data-v-106966db><td class="bold-td" data-v-106966db>501kg 以上</td><td class="font-bold" data-v-106966db>12元 / kg</td><td class="font-bold text-primary-color" data-v-106966db>15元 / kg</td></tr><tr class="info-row" data-v-106966db><td class="bold-td" data-v-106966db>FBA直送</td><td class="text-success font-bold" data-v-106966db><i class="fa-solid fa-circle-check" data-v-106966db></i> 対応可</td><td class="text-success font-bold" data-v-106966db><i class="fa-solid fa-circle-check" data-v-106966db></i> 対応可</td><td class="text-danger font-bold" data-v-106966db><i class="fa-solid fa-circle-xmark" data-v-106966db></i> 不可</td></tr><tr class="info-row" data-v-106966db><td class="bold-td" data-v-106966db>着荷目安日数</td><td colspan="2" class="text-center" data-v-106966db>7 ～ 14日</td><td data-v-106966db>20 ～ 30日 <span class="note" data-v-106966db>(繁忙期は遅延の可能性あり)</span></td></tr><tr class="info-row" data-v-106966db><td class="bold-td" data-v-106966db>関税お支払い</td><td colspan="3" class="text-center" data-v-106966db>都度、船会社より直接ご請求</td></tr></tbody></table></div><div class="panel-notes" data-v-106966db><h4 data-v-106966db><i class="fa-solid fa-circle-info" data-v-106966db></i> 注意事項</h4><ul data-v-106966db><li data-v-106966db>FBA納品の場合、輸入者名義と出品アカウントの登録者名が一致している必要があります。</li><li data-v-106966db>海源船便をご利用いただける商品の種類は、1回の発送につき最大3品目までと制限がございます。</li><li data-v-106966db>梱包ダンボールの3辺合計が150cmを超える場合、日本国内での配送時に大型追加送料が発生することがございます。</li><li data-v-106966db>沖縄、北海道、および離島への発送は、転送中継料金として1箱あたり別途 <strong data-v-106966db>3,000円</strong> を申し受けます。</li></ul></div></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      if (unref(activeTab) === "container") {
+        _push(`<div class="tab-panel glass-card animate-fade-in-up" data-v-106966db><h3 data-v-106966db>混載船便（LCL）＆ コンテナ便（FCL）</h3><p class="panel-desc" data-v-106966db>パレット単位での大量仕入れや、コンテナチャーターが必要な超大口の輸入案件に対応します。</p><div class="container-options-grid" data-v-106966db><div class="container-card" data-v-106966db><span class="card-icon" data-v-106966db><i class="fa-solid fa-boxes-stacked" data-v-106966db></i></span><h4 data-v-106966db>混載船便 (LCL)</h4><p class="card-tag" data-v-106966db>ドア to ポート / ドア to ドア</p><p class="desc" data-v-106966db>複数のお客様の貨物を1つのコンテナに混載して輸送します。物量に応じた立方メートル（CBM）単位での請求となります。</p></div><div class="container-card" data-v-106966db><span class="card-icon" data-v-106966db><i class="fa-solid fa-truck-flatbed-container" data-v-106966db></i></span><h4 data-v-106966db>20F / 40F コンテナチャーター</h4><p class="card-tag" data-v-106966db>コンテナ貸切輸送</p><p class="desc" data-v-106966db>自社専用にコンテナを借り切って輸送します。品目が単一で物量が多い場合、最も立方単価を下げられる輸送方法です。</p></div></div><div class="quote-inquiry-box" data-v-106966db><p data-v-106966db>※混載便およびコンテナ便は、お取り扱い品目、梱包サイズ、通関時の法令検査の有無、および提携通関業者によって料金が日々変動いたします。詳細なお見積もりは、お問い合わせフォームよりご相談ください。</p>`);
+        _push(ssrRenderComponent(_component_NuxtLink, {
+          to: "/contact",
+          class: "btn-primary"
+        }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`お見積もり・個別相談`);
+            } else {
+              return [
+                createTextVNode("お見積もり・個別相談")
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+        _push(`</div></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div></div><div class="caution-section glass-card" data-v-106966db><div class="caution-header" data-v-106966db><i class="fa-solid fa-circle-exclamation" data-v-106966db></i><h3 data-v-106966db>国際発送についての基本ルール</h3></div><ul class="caution-list" data-v-106966db><li data-v-106966db>特に配送ルートのご指定がない場合は、信頼性とスピードのバランスが良い <strong data-v-106966db>OCS航空便</strong> にて手配いたします。</li><li data-v-106966db>燃料サーチャージ等、送料表に記載のない追加の手数料請求は一切ございませんのでご安心ください。</li><li data-v-106966db>送料は原則、中国からの発送前にお支払いいただき、着金確認後の出荷手配となります。（高速プラン除く）</li><li data-v-106966db>通関時に発生する関税および国内輸入消費税は、配送業者より直接着払い等でご請求されますので、お客様ご自身にてお支払いをお願いいたします。</li></ul></div></div>`);
+    };
+  }
+};
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/shipping.vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const shipping = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-106966db"]]);
+export {
+  shipping as default
+};
+//# sourceMappingURL=shipping-CReXa22K.js.map
